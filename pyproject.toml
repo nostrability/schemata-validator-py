@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "schemata-validator-nostr"
+version = "0.1.0"
+description = "Nostr protocol JSON schema validator"
+license = {text = "GPL-3.0-or-later"}
+requires-python = ">=3.9"
+dependencies = ["jsonschema>=4.0"]
+
+[tool.setuptools.packages.find]
+include = ["schemata_validator*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
