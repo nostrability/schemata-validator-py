@@ -1,5 +1,7 @@
 # schemata-validator-py
 
+[![Test](https://github.com/nostrability/schemata-validator-py/actions/workflows/test.yml/badge.svg)](https://github.com/nostrability/schemata-validator-py/actions/workflows/test.yml)
+
 Python validator for [Nostr](https://nostr.com/) protocol JSON schemas. Built on top of [`schemata-py`](https://github.com/nostrability/schemata-py) and [`jsonschema`](https://python-jsonschema.readthedocs.io/).
 
 ## When to use this
