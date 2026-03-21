@@ -12,15 +12,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/checkout@v4
-        with:
-          repository: nostrability/schemata-py
-          path: ../schemata-py
+      - name: Clone schemata-py
+        run: git clone https://github.com/nostrability/schemata-py.git ../schemata-py
 
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
       - run: pip install jsonschema pytest
-      - run: pip install -e ../schemata-py
-      - run: PYTHONPATH=. pytest tests/ -v
+      - run: PYTHONPATH=../schemata-py:. pytest tests/ -v
